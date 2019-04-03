@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "mhealth-app",
+    "description": "mhealth-alpha",
+    "slug": "nombreGrupo",
+    "privacy": "public",
+    "sdkVersion": "31.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/ecg.png",
+    "primaryColor":"#1E88E5",
+    "splash": {
+      "image": "./assets/asclepios.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#b6ffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
