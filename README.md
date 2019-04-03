@@ -26,7 +26,7 @@ npm install -g expo-cli
 ```
 npm install
 ```
-4. Iniciar sesión en expo
+4. Iniciar sesión en expo (no es necesario pero da mayores beneficios)
 ```
 expo login
 ```
