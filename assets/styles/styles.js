@@ -7,10 +7,19 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center'
     },
+    containerGrid: {
+      backgroundColor: '#fff',
+      flexDirection: 'row' ,
+      marginVertical:10
+    },
     drawerContainer: {
         flex: 1,
         backgroundColor: '#fff',
     },
+    row: {
+    padding: 10,
+    height: 44,
+  },
     containerLogo: {
       flexGrow: 1,
       justifyContent:'flex-end',
@@ -19,6 +28,29 @@ const styles = StyleSheet.create({
     //
     // Main.js
     //
+
+    headerText: {
+      fontSize: 20,
+      textAlign: "center",
+      margin: 10,
+      fontWeight: "bold"
+ },
+ GridViewContainer: {
+  flex:1,
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: 100,
+  margin: 5,
+  backgroundColor: '#7B1FA2'
+},
+GridViewTextLayout: {
+  fontSize: 20,
+  fontWeight: 'bold',
+  justifyContent: 'center',
+  color: '#fff',
+  padding: 10,
+},
+
     mainWrapper: {
       flex: 1,
       backgroundColor: '#fff',
@@ -139,12 +171,21 @@ const styles = StyleSheet.create({
       marginTop:35
 
     },
+    btnPac: {
+      width: 280,
+      height: 40,
+      justifyContent:'center' ,
+      backgroundColor:'#ffab50' ,
+      textAlign:'center' ,
+      marginTop:35
+
+   },
     btn03: {
       width: 280,
       height: 80,
       borderRadius: 25,
-      backgroundColor:'#fb8c00' ,
       justifyContent:'center' ,
+      backgroundColor:'#ffab50' ,
       textAlign:'center' ,
       marginTop:35
 
@@ -153,8 +194,8 @@ const styles = StyleSheet.create({
      width: 280,
      height: 80,
      borderRadius: 25,
-     backgroundColor:'#fb8c00' ,
      justifyContent:'center' ,
+     backgroundColor:'#ffab50' ,
      textAlign:'center' ,
      marginTop:35
 
@@ -163,7 +204,7 @@ const styles = StyleSheet.create({
      width: 280,
      borderRadius: 25,
      height: 80,
-     backgroundColor:'#fb8c00' ,
+     backgroundColor:'#ffab50' ,
      justifyContent:'center' ,
      textAlign:'center' ,
      marginTop:35
@@ -173,7 +214,7 @@ const styles = StyleSheet.create({
      width: 280,
      height: 80,
      borderRadius: 25,
-     backgroundColor:'#fb8c00' ,
+     backgroundColor:'#ffab50' ,
      justifyContent:'center' ,
      textAlign:'center' ,
      marginTop:35

@@ -11,10 +11,10 @@ export default class HeaderDefault extends React.Component {
         <View style={{backgroundColor: '#1E88E5'}}>
             <Header style={{backgroundColor: '#1E88E5', marginTop: 20, elevation: 0}}>
                 <Left>
-                    <Entypo color={'#black'} name="menu" size={25} onPress={() => Actions.drawerOpen()}/>
+                    <Entypo color={'white'} name="menu" size={25} onPress={() => Actions.drawerOpen()}/>
                 </Left>
                 <Body>
-                    <Title style={{color: 'black', fontFamily: 'Product-Sans-Regular'}}>{this.props.title}</Title>
+                    <Title style={{color: 'white', fontFamily: 'Product-Sans-Regular'}}>{this.props.title}</Title>
                 </Body>
                 <Right />
             </Header>

@@ -19,8 +19,8 @@ export default class Feeds extends React.Component {
   componentWillMount() {
     //
     // sample fetch api from sub reddit
-    //
-    var url = 'https://www.reddit.com/r/wtfstockphotos.json';
+    //https://www.reddit.com/r/todayilearned.json, https://www.reddit.com/r/wtfstockphotos.json
+    var url = 'https://www.reddit.com/r/EarthPorn.json';
     axios.get(url).then(res => {
       this.setState({data: res.data.data.children, loading: false});
     });
@@ -29,7 +29,7 @@ export default class Feeds extends React.Component {
   render() {
     return (
       <View style={styles.drawerContainer}>
-        <HeaderDefault title="Menú principal"/>
+        <HeaderDefault title="Noticias"/>
         {this.renderFeeds()}
       </View>
     );

@@ -8,6 +8,7 @@ import { AntDesign } from '@expo/vector-icons';
 import {Entypo} from '@expo/vector-icons';
 import {FontAwesome} from '@expo/vector-icons';
 import {MaterialCommunityIcons} from '@expo/vector-icons';
+import {Ionicons} from '@expo/vector-icons';
 export default class DrawerContent extends React.Component {
 
   constructor(props) {
@@ -72,19 +73,19 @@ export default class DrawerContent extends React.Component {
                 <List>
                     <ListItem icon onPress={() => Actions.feeds()}>
                         <Left>
-                            <FontAwesome name="home" size={20} />
+                            <FontAwesome name="newspaper-o" size={20} />
                         </Left>
                         <Body>
-                            <Text style={styles.drawerTxtList}>Menú principal</Text>
+                            <Text style={styles.drawerTxtList}>Noticias</Text>
                         </Body>
                         <Right />
                     </ListItem>
                     <ListItem icon onPress={() => Actions.desarrollo( Actions.midesarrollo())}>
                         <Left>
-                            <AntDesign name="medicinebox" size={20} />
+                            <Ionicons name="md-person" size={20} />
                         </Left>
                         <Body>
-                            <Text style={styles.drawerTxtList}>menu item</Text>
+                            <Text style={styles.drawerTxtList}>Menú principal</Text>
                         </Body>
                         <Right />
                     </ListItem>
