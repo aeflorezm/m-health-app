@@ -4,7 +4,7 @@ import { Content, Form, Item, Input, Label, Button, Text } from 'native-base';
 import HeaderSign from '../../components/Header/HeaderSign';
 import styles from '../../../assets/styles/styles';
 import { Actions } from 'react-native-router-flux';
-
+import * as firebase from 'firebase';
 export default class Signup extends React.Component {
 
   constructor(props) {
@@ -111,6 +111,9 @@ export default class Signup extends React.Component {
     //
     // sample save data (replace with your backend API)
     //
+    firebase.auth().createUserWithEmailAndPassword(this.state.yourEmail, this.state.yourPassword)
+.then(() => { }, (error) => { Alert.alert(error.message); });
+
     var saveData = {
       yourFullName: this.state.yourFullName,
       yourEmail: this.state.yourEmail,
@@ -118,8 +121,8 @@ export default class Signup extends React.Component {
     };
 
     AsyncStorage.removeItem('userData');
-    AsyncStorage.setItem('userLoggedIn', 'YES');
+    //AsyncStorage.setItem('userLoggedIn', 'YES');
     AsyncStorage.setItem('userData', JSON.stringify(saveData));
-    Actions.drawer({type: 'reset'});
+    //Actions.drawer({type: 'reset'});
   }
 }

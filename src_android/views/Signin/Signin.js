@@ -4,7 +4,7 @@ import { Content, Form, Item, Input, Label, Button, Text } from 'native-base';
 import HeaderSign from '../../components/Header/HeaderSign';
 import styles from '../../../assets/styles/styles';
 import { Actions } from 'react-native-router-flux';
-
+import * as firebase from 'firebase';
 export default class Signin extends React.Component {
 
   constructor(props) {
@@ -103,8 +103,11 @@ export default class Signin extends React.Component {
       Alert.alert('Acceso denegado', 'Correo electrónico o contraseña requeridos');
       return false;
     }
+    firebase.auth().signInWithEmailAndPassword(this.state.yourEmail, this.state.yourPassword)
+.then(() => {AsyncStorage.setItem('userLoggedIn', 'YES'); Actions.drawer({type: 'reset'});
+}, (error) => { Alert.alert(error.message); this.setState({btnDisable: false}); });
 
-    AsyncStorage.setItem('userLoggedIn', 'YES');
-    Actions.drawer({type: 'reset'});
+    //AsyncStorage.setItem('userLoggedIn', 'YES');
+    //Actions.drawer({type: 'reset'});
   }
 }

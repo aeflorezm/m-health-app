@@ -3,17 +3,27 @@ import { Platform } from 'react-native';
 import { AppLoading, Font } from 'expo';
 import Routes from './src_ios/routes/Routes';
 import AndroidRoutes from './src_android/routes/Routes';
+import FirebaseConfig from './FirebaseConfig';
+import * as firebase from 'firebase';
 
 export default class App extends React.Component {
-
   constructor(){
     super()
 
     this.state = {
       loading: true,
+      isAuthenticationReady: false,
+      isAuthenticated: false,
       fontsLoaded: false
     }
+    // Initialize firebase...
+  if (!firebase.apps.length) { firebase.initializeApp(FirebaseConfig.firebaseConfig); }
+firebase.auth().onAuthStateChanged(this.onAuthStateChanged);
   }
+  onAuthStateChanged = (user) => {
+    this.setState({isAuthenticationReady: true});
+    this.setState({isAuthenticated: !!user});
+}
 
   componentWillMount() {
     this.fontLoad();

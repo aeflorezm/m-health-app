@@ -220,6 +220,27 @@ GridViewTextLayout: {
      marginTop:35
 
    },
+   //pacientes
+   GridViewBlockStyle: {
+
+  justifyContent: 'center',
+  flex:1,
+  alignItems: 'center',
+  height: 100,
+  margin: 5,
+  backgroundColor: '#00BCD4'
+
+}
+,
+
+GridViewInsideTextItemStyle: {
+
+   color: '#fff',
+   padding: 10,
+   fontSize: 18,
+   justifyContent: 'center',
+
+ },
     btnTxt: {
         fontFamily: 'Product-Sans-Regular',
         color: "black",
@@ -235,8 +256,9 @@ GridViewTextLayout: {
         backgroundColor: '#fff'
     },
     signTxt: {
+      fontFamily: 'Product-Sans-Regular'
     },
-    fontFamily: 'Product-Sans-Regular',
+
 
     //
     // DrawerContent.js

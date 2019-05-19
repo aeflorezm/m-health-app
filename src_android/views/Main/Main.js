@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import { Actions } from 'react-native-router-flux';
 import styles from '../../../assets/styles/styles';
 import logo from '../../../assets/images/clipboard.png';
+import * as firebase from 'firebase';
 export default class Main extends React.Component {
 
   constructor(props) {
