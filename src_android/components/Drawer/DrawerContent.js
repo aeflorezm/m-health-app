@@ -71,12 +71,12 @@ export default class DrawerContent extends React.Component {
         <View style={styles.drawerListContent}>
             <Content>
                 <List>
-                    <ListItem icon onPress={() => Actions.feeds()}>
+                    <ListItem icon onPress={() => Actions.tabbar()}>
                         <Left>
-                            <FontAwesome name="newspaper-o" size={20} />
+                            <AntDesign name="home" size={20} />
                         </Left>
                         <Body>
-                            <Text style={styles.drawerTxtList}>Noticias</Text>
+                            <Text style={styles.drawerTxtList}>Inicio</Text>
                         </Body>
                         <Right />
                     </ListItem>
@@ -89,15 +89,7 @@ export default class DrawerContent extends React.Component {
                         </Body>
                         <Right />
                     </ListItem>
-                    <ListItem icon >
-                        <Left>
-                            <AntDesign name="areachart" size={20} />
-                        </Left>
-                        <Body>
-                            <Text style={styles.drawerTxtList}>Seguimiento</Text>
-                        </Body>
-                        <Right />
-                    </ListItem>
+
                     <ListItem icon onPress={() => Actions.network()}>
                         <Left>
                             <Entypo name="network" size={20} />

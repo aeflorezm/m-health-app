@@ -6,7 +6,8 @@
     projectId: "holo-d0e59",
     storageBucket: "holo-d0e59.appspot.com",
     messagingSenderId: "657630019198",
+    persistence: true,
     appId: "1:657630019198:web:b547d9a837a0ca43"
     }
-    
+
   };

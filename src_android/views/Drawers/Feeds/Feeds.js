@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, ActivityIndicator, Image } from 'react-native';
-import { Text, Content, Card, CardItem, Thumbnail, Left, Body, Right } from 'native-base';
+import { View, ActivityIndicator, Image,ScrollView } from 'react-native';
+import { Text, Content, Card, CardItem, Thumbnail, Left, Body, Right,Icon,Button } from 'native-base';
 import styles from '../../../../assets/styles/styles';
 import HeaderDefault from '../../../components/Header/HeaderDefault';
 import axios from 'axios';
@@ -16,62 +16,98 @@ export default class Feeds extends React.Component {
     }
   }
 
-  componentWillMount() {
-    //
-    // sample fetch api from sub reddit
-    //https://www.reddit.com/r/todayilearned.json, https://www.reddit.com/r/wtfstockphotos.json
-    var url = 'https://www.reddit.com/r/EarthPorn.json';
-    axios.get(url).then(res => {
-      this.setState({data: res.data.data.children, loading: false});
-    });
-  }
+
 
   render() {
     return (
       <View style={styles.drawerContainer}>
-        <HeaderDefault title="Noticias"/>
-        {this.renderFeeds()}
+        <HeaderDefault title="Inicio"/>
+        <Content padder>
+        <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
+                                 Últimas interacciones
+                             </Text>
+        <Card style={{flex: 0}}>
+            <CardItem>
+              <Left>
+                <Thumbnail source={require('../../../../assets/images/paciente1.jpg')} />
+                <Body>
+                  <Text>NativeBase</Text>
+                  <Text note>April 15, 2016</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+
+                <Image source={require('../../../../assets/images/emergency.jpeg')}
+                 style={{height: 100, width: null, flex: 1}}/>
+                 </CardItem>
+
+
+                <CardItem >
+                <Body>
+                <Text>
+                Hi~{"\n"}
+                this is a test message.~{"\n"}
+                Algo de texto algo de texto algo de texto algo de texto algo de~{"\n"}
+                ALGO DE TEXTO
+
+                </Text>
+              </Body>
+            </CardItem>
+
+          </Card>
+          <Card style={{flex: 0}}>
+          <CardItem>
+            <Left>
+              <Thumbnail source={require('../../../../assets/images/paciente2.jpeg')} />
+              <Body>
+                <Text>NativeBase</Text>
+                <Text note>April 15, 2016</Text>
+              </Body>
+            </Left>
+          </CardItem>
+          <CardItem >
+          <Body>
+          <Text>
+          Hi~{"\n"}
+          this is a test message.~{"\n"}
+          Algo de texto algo de texto algo de texto algo de texto algo de~{"\n"}
+          ALGO DE TEXTO
+
+          </Text>
+        </Body>
+      </CardItem>
+
+    </Card>
+
+    <Card style={{flex: 0}}>
+    <CardItem>
+      <Left>
+        <Thumbnail source={require('../../../../assets/images/paciente3.jpeg')} />
+        <Body>
+          <Text>NativeBase</Text>
+          <Text note>April 15, 2016</Text>
+        </Body>
+      </Left>
+    </CardItem>
+    <CardItem >
+    <Body>
+    <Text>
+    Hi~{"\n"}
+    this is a test message.~{"\n"}
+    Algo de texto algo de texto algo de texto algo de texto algo de~{"\n"}
+    ALGO DE TEXTO
+
+    </Text>
+  </Body>
+</CardItem>
+
+</Card>
+
+  </Content>
       </View>
     );
   }
 
-  renderFeeds() {
-    if(this.state.loading === true) {
-      return(
-        <View style={styles.separatorWrapper}>
-          <ActivityIndicator />
-        </View>
-      )
-    }else{
-      if(this.state.data.length === 0) {
-        return(
-          <View style={styles.separatorWrapper}>
-            <Text style={styles.subTitleTxt}>No Data</Text>
-          </View>
-        )
-      }else{
-        return(
-          <Content padder>
-            {this.state.data.map((item, i) => {
-              return(
-                <Card key={i}>
-                  <CardItem>
-                    <Left>
-                      <Thumbnail source={{uri: item.data.thumbnail}} />
-                      <Body>
-                        <Text style={styles.titleTxt}>{item.data.author}</Text>
-                      </Body>
-                    </Left>
-                  </CardItem>
-                  <CardItem cardBody>
-                    <Image source={{uri: item.data.url}} style={{height: 300, width: '100%'}}/>
-                  </CardItem>
-                </Card>
-              )
-            })}
-          </Content>
-        )
-      }
-    }
-  }
+
 }
