@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { Router, Scene, Drawer, ActionConst,Tabs, Stack } from 'react-native-router-flux';
 import { AntDesign } from '@expo/vector-icons';
 // Views
+//, poner en tabs, key legacy
 import Signin from '../views/Signin/Signin';
 import Signup from '../views/Signup/Signup';
 import Main from '../views/Main/Main';
@@ -48,9 +49,9 @@ const Routes = () => {
                     <Tabs
                         key="tabbar"
                         legacy={true}
-                        swipeEnabled={true}
                         tabBarPosition={'bottom'}
                         showLabel={false}
+                        swipeEnabled={false}
                         lazy={true}
                         animationEnabled={true}
                         hideNavBar>

@@ -72,18 +72,90 @@ export default class Network extends React.Component {
   agregarPaciente(){
 
 
-
-    firebase.database().ref('pacientes/1').set(
+    firebase.database().ref('pacientes/0').set(
         {
-            name: 'Andres Elías',
-            age: 22
+            name: 'Andrés Flórez',
+            age: 21,
+            date:'1/05/2019',
+            basic:' Paciente masculino diagnosticado con hipertensión arterial hace dos horas.Sin dieta especial.Lleva acompañamiento cardiológico permanente. Uĺtima toma de presión: hace 10 horas',
+            duty:'Toma de presión a las 11:00 pm',
+            medication:'comosalmeterol cada 12 hora'
+
         }
     )
 
+
+
+    firebase.database().ref('pacientes/1').set(
+        {
+            name: 'Blanca Ruiz',
+            age: 74,
+            date:'12/05/2019',
+            basic:' Paciente  femenimo diagnosticado con bronquitis crónica. Antecedentes de asma. Toma de signos vitales y de presión cada 12 horas. Ultima vez: hace 4 horas.',
+            duty:'Toma de temperatura a las 3:00pm y cambio de vendaje',
+            medication:'comosalmeterol cada 12 hora'
+
+        }
+    )
+
+    firebase.database().ref('pacientes/2').set(
+        {
+          name: 'Tatiana María Bello',
+          age: 24,
+          date:'20/05/2019',
+          basic:' Paciente  femenimo diagnosticado pancreatitis aguda.',
+          duty:'Preparación para liquidos intravenosos 5:00pm',
+          medication:'Lidocaina cada 24 horas'
+        }
+    )
     firebase.database().ref('pacientes/3').set(
         {
-            name: 'Perreo intenso',
-            age: 23
+          name: 'Tatiana María Bello',
+          age: 24,
+          date:'20/05/2019',
+          basic:' Paciente  femenimo diagnosticado pancreatitis aguda.',
+          duty:'Preparación para liquidos intravenosos 5:00pm',
+          medication:'Lidocaina cada 24 horas'
+        }
+    )
+    firebase.database().ref('pacientes/3').set(
+        {
+          name: 'Luciana Rodríguez',
+          age: 0,
+          date:'14/05/2019',
+          basic:'Sepsis neonatal por virus de herpes simple.',
+          duty:'Toma de muestras de sangre 3:20 am',
+          medication:'Acetaminofén e Ibuprofeno cada 8 horas'
+        }
+    )
+    firebase.database().ref('pacientes/4').set(
+        {
+          name: 'Jesús Vasquez',
+          age: 80,
+          date:'10/05/2019',
+          basic:'Paciente masculino diagnosticado con nefropatía diabética,hipertiroidismo e hipertensión.',
+          duty:'7:30 pm Toma de signos vitales y exámenes de orina',
+          medication:'Acetaminofén, Multivitamínicos, Carvedilol '
+        }
+    )
+    firebase.database().ref('pacientes/5').set(
+        {
+          name: 'Samir Abud',
+          age: 4,
+          date:'17/05/2019',
+          basic:' Paciente masculino diagnosticado cardiopatía isquémica.Presenta nauseas, vomito, frecuencia cardiaca alta.',
+          duty:'Apoyo respiratorio 5:05 am ',
+          medication:'Ibuprofeno cada 24 horas'
+        }
+    )
+    firebase.database().ref('pacientes/6').set(
+        {
+          name: 'Will smith ',
+          age: 56,
+          date:'21/05/2019',
+          basic:' Paciente infartado y con antecedentes de hipertensión arterial.',
+          duty:'Reanimación 12:05 am',
+          medication:'Nitroglicerina'
         }
     )
 
@@ -116,9 +188,9 @@ export default class Network extends React.Component {
     //}, 5000);
 
 // To Update a user
-firebase.database().ref('users/004').update({
-    name: 'Pheng Sengvuthy'
-});
+//firebase.database().ref('users/004').update({
+    //name: 'Pheng Sengvuthy'
+//});
 
 
         // To Update a user
