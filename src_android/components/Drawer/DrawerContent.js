@@ -80,31 +80,15 @@ export default class DrawerContent extends React.Component {
                         </Body>
                         <Right />
                     </ListItem>
-                    <ListItem icon onPress={() => Actions.desarrollo( Actions.midesarrollo())}>
-                        <Left>
-                            <Ionicons name="md-person" size={20} />
-                        </Left>
-                        <Body>
-                            <Text style={styles.drawerTxtList}>Menú principal</Text>
-                        </Body>
-                        <Right />
-                    </ListItem>
 
-                    <ListItem icon onPress={() => Actions.network()}>
-                        <Left>
-                            <Entypo name="network" size={20} />
-                        </Left>
-                        <Body>
-                            <Text style={styles.drawerTxtList}>menu item</Text>
-                        </Body>
-                        <Right />
-                    </ListItem>
+
+
                     <ListItem icon onPress={() => Actions.about()}>
                         <Left>
-                            <AntDesign name="infocirlceo" size={20} />
+                            <AntDesign name="qrcode" size={20} />
                         </Left>
                         <Body>
-                            <Text style={styles.drawerTxtList}>Quiénes somos</Text>
+                            <Text style={styles.drawerTxtList}>Generador qr</Text>
                         </Body>
                         <Right />
                     </ListItem>

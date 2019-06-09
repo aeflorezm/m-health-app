@@ -1,11 +1,15 @@
-import React from 'react';
-import { View, ActivityIndicator, Image,ScrollView,TouchableOpacity,SafeAreaView,Platform} from 'react-native';
-import { Text, Content, Card, CardItem, Thumbnail, Left, Body, Right,Icon,Button } from 'native-base';
+import React, { Component } from 'react';
+import { View, StyleSheet, ActivityIndicator, Image,ScrollView,TouchableOpacity,SafeAreaView,Platform} from 'react-native';
+import { Text, Content, Card, CardItem, Thumbnail, Left, Body, Right,Button } from 'native-base';
 import styles from '../../../../assets/styles/styles';
 import HeaderDefault from '../../../components/Header/HeaderDefault';
 import * as firebase from 'firebase';
 import Category from '../../../components/Explore/Category'
 import axios from 'axios';
+import { Actions } from 'react-native-router-flux';
+import ActionButton from 'react-native-action-button';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 
 export default class Feeds extends React.Component {
 
@@ -307,7 +311,8 @@ export default class Feeds extends React.Component {
 <CardItem >
 <Body>
 <Text>
-{this.state.basic6}
+{this.state.basic6}s
+
 
 
 
@@ -318,6 +323,18 @@ export default class Feeds extends React.Component {
 </Card>
 
   </Content>
+
+  <ActionButton buttonColor="rgba(231,76,60,1)">
+    <ActionButton.Item buttonColor='#9b59b6' title="Agregar paciente" onPress={() => Actions.editarp()}>
+      <Icon name="md-person-add" style={styles.actionButtonIcon} />
+    </ActionButton.Item>
+    <ActionButton.Item buttonColor='#3498db' title="Editar paciente" onPress={() =>Actions.editarp()} >
+      <Icon name="md-create" style={styles.actionButtonIcon} />
+    </ActionButton.Item>
+    <ActionButton.Item buttonColor='#1abc9c' title="Eliminar paciente" onPress={() => {}}>
+      <Icon name="md-remove-circle-outline" style={styles.actionButtonIcon} />
+    </ActionButton.Item>
+  </ActionButton>
       </View>
     );
   }

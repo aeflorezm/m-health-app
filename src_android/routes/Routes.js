@@ -9,6 +9,7 @@ import Signup from '../views/Signup/Signup';
 import Main from '../views/Main/Main';
 import Cerotres from '../views/Cerotres/Cerotres';
 import Integracion from '../views/Integracion/Integracion';
+import EditarP from '../views/EditarP/EditarP';
 // Drawers
 import DrawerContent from '../components/Drawer/DrawerContent';
 import Feeds from '../views/Drawers/Feeds/Feeds';
@@ -77,9 +78,9 @@ const Routes = () => {
                         </Stack>
                         <Stack
                             key="tab3"
-                            title="Pefil"
+                            title="Escanear"
                             icon={Tabicon}
-                            iconName="user"
+                            iconName="qrcode"
                             hideNavBar>
 
                             <Scene key="tab3" title="Tab3" component={Tab3} hideNavBar />
@@ -100,6 +101,7 @@ const Routes = () => {
                 </Drawer>
 
                 <Scene key="avatar" title="Avatar" component={Avatar} hideNavBar />
+                <Scene key="editarp" title="EditarP" component={EditarP} hideNavBar />
 
             </Scene>
         </Router>

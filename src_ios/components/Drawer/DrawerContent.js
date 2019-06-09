@@ -6,8 +6,8 @@ import styles from '../../../assets/styles/styles';
 import newUser from '../../../assets/icons/new-user.png';
 import { AntDesign } from '@expo/vector-icons';
 import {Entypo} from '@expo/vector-icons';
-import {MaterialCommunityIcons} from '@expo/vector-icons';
 import {FontAwesome} from '@expo/vector-icons';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 import {Ionicons} from '@expo/vector-icons';
 export default class DrawerContent extends React.Component {
 
@@ -71,48 +71,24 @@ export default class DrawerContent extends React.Component {
         <View style={styles.drawerListContent}>
             <Content>
                 <List>
-                    <ListItem icon onPress={() => Actions.feeds()}>
+                    <ListItem icon onPress={() => Actions.tabbar()}>
                         <Left>
-                            <FontAwesome name="newspaper"size={20} />
+                            <AntDesign name="home" size={20} />
                         </Left>
                         <Body>
-                            <Text style={styles.drawerTxtList}>Noticias</Text>
+                            <Text style={styles.drawerTxtList}>Inicio</Text>
                         </Body>
                         <Right />
                     </ListItem>
-                    <ListItem icon onPress={() => Actions.desarrollo( Actions.midesarrollo())}>
-                        <Left>
-                            <Ionicons name="md-person" size={20} />
-                        </Left>
-                        <Body>
-                            <Text style={styles.drawerTxtList}>Menú principal </Text>
-                        </Body>
-                        <Right />
-                    </ListItem>
-                    <ListItem icon >
-                        <Left>
-                            <AntDesign name="areachart" size={20} />
-                        </Left>
-                        <Body>
-                            <Text style={styles.drawerTxtList}>Seguimiento</Text>
-                        </Body>
-                        <Right />
-                    </ListItem>
-                    <ListItem icon onPress={() => Actions.network()}>
-                        <Left>
-                            <Entypo name="network" size={20} />
-                        </Left>
-                        <Body>
-                            <Text style={styles.drawerTxtList}>menu item</Text>
-                        </Body>
-                        <Right />
-                    </ListItem>
+
+
+
                     <ListItem icon onPress={() => Actions.about()}>
                         <Left>
-                            <AntDesign name="infocirlceo" size={20} />
+                            <AntDesign name="qrcode" size={20} />
                         </Left>
                         <Body>
-                            <Text style={styles.drawerTxtList}>Quiénes somos</Text>
+                            <Text style={styles.drawerTxtList}>Generador qr</Text>
                         </Body>
                         <Right />
                     </ListItem>

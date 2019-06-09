@@ -230,8 +230,23 @@ GridViewTextLayout: {
   margin: 5,
   backgroundColor: '#00BCD4'
 
-}
-,
+},
+
+containerBarcode: {
+    flex: 1,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center'
+},
+
+inputBarcode: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    margin: 10,
+    borderRadius: 5,
+    padding: 5,
+},
 
 GridViewInsideTextItemStyle: {
 
@@ -241,6 +256,12 @@ GridViewInsideTextItemStyle: {
    justifyContent: 'center',
 
  },
+ actionButtonIcon: {
+    fontSize: 20,
+    height: 22,
+    color: 'white',
+  },
+
     btnTxt: {
         fontFamily: 'Product-Sans-Regular',
         color: "black",
